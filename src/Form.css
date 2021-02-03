@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #8f32ad;
+}
+
+form {
+  width: 250px;
+  height: auto;
+  background: #fff;
+  margin: 20px 65px;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+h2 {
+  margin: -25px 0 10px 0;
+  color: #555;
+  font-size: 20px;
+}
+
+input {
+  width: 220px;
+  margin: 0 0 15px 0;
+  padding: 10px;
+  background: #f1f1f1;
+  border: none;
+  outline: none;
+}
+
+::placeholder {
+  color: #555;
+}
+
+button {
+  width: 240px;
+  padding: 10px;
+  background: #8f32ad;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  margin: 10px 0;
+}
+
+.success-message {
+  background: lightgreen;
+  margin: 8px 5px;
+  padding: 10px;
+  color: #fff;
+}
+
+span {
+  color: red;
+  font-size: 12px;
+  padding: 5px;
+}
