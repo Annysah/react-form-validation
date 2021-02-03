@@ -2,15 +2,20 @@ import React, { useState } from "react";
 import "./Form.css";
 
 function Form() {
+  //state for the inputs
   const [values, setValues] = useState({
     firstName: "",
     lastName: "",
     email: ""
   });
 
+  //state for submit
   const [submitted, setSubmitted] = useState(false);
+  
+  //state for validating the input
   const [valid, setValid] = useState(false);
-
+  
+  //handler to prevent submitting by default
   const handleSubmit = (event) => {
     event.preventDefault();
     setSubmitted(true);
@@ -29,6 +34,7 @@ function Form() {
             setValues({ ...values, firstName: event.target.value })
           }
         />
+        //validating the first name when submitted
         {submitted && !values.firstName ? (
           <span>Please enter your first name</span>
         ) : null}
@@ -41,6 +47,7 @@ function Form() {
             setValues({ ...values, lastName: event.target.value })
           }
         />
+        //validating the last name when submitted
         {submitted && !values.lastName ? (
           <span>Please enter your last name</span>
         ) : null}
@@ -53,10 +60,13 @@ function Form() {
             setValues({ ...values, email: event.target.value })
           }
         />
+        //validating the email when submitted
         {submitted && !values.email ? (
           <span>Please enter a valid email</span>
         ) : null}
         <button className="form-button">Sign up</button>
+        
+        //validating the success message and displaying it if inputs are valid
         {submitted && valid ? (
           <div className="success-message">Registration successful!</div>
         ) : null}
